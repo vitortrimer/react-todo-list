@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { hot } from "react-hot-loader/root";
+import Root from "./components/Root";
+import { Provider } from "react-redux";
+import AppReducer from "./reducers/app";
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./styles/css/main.css";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(
+  AppReducer, composeEnhancers(applyMiddleware(thunk))
+)
+
+const App = () => {
+  return(
+    <Provider store={ store }>
+      <Root />
+    </Provider>
+  )
 }
 
-export default App;
+export default hot(App);
+

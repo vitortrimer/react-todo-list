@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0; }
+
+body {
+  font-family: 'Ubuntu', serif;
+  background-color: #f7f7f7; }
+
+.header-background {
+  background-color: #30706F;
+  height: 200px; }
+
+.header-container {
+  font-family: 'Dancing Script', cursive; }
+  .header-container .header-paper {
+    padding: 30px; }
+    .header-container .header-paper h3 {
+      cursor: default;
+      font-size: 62px;
+      text-align: center;
+      font-weight: 500 italic;
+      padding-bottom: 4px;
+      color: #30706F; }
+    .header-container .header-paper .do-label {
+      color: #B51630; }
+    .header-container .header-paper h4 {
+      font-size: 12px;
+      cursor: default;
+      text-align: center;
+      font-weight: bold;
+      color: #B51630;
+      font-family: 'Ubuntu', serif; }
+    .header-container .header-paper .by-label {
+      color: #30706F; }
+    .header-container .header-paper .search-textfield {
+      padding-top: 30px; }
+
+.todo-menu {
+  padding-top: 40px; }
+
+.todo-list-content {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .todo-list-content .todos-title {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    color: #30706F; }
+  .todo-list-content .todo-item {
+    padding: 10px;
+    border-left: 2px solid #fff; }
+  .todo-list-content .todo-item:hover {
+    border-left: 2px solid #30706F; }
